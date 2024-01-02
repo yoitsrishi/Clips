@@ -261,5 +261,7 @@
       </div>
     </a>
   </div>
-  <app-auth-modal></app-auth-modal>
+  <app-auth-modal
+    *ngIf="!(auth.isAuthenticatedWithDelay$ | async)"
+  ></app-auth-modal>
 </section>
